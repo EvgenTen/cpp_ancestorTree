@@ -18,12 +18,12 @@ TEST_CASE("Test addFather+relation+find"){
 }
 TEST_CASE("Test relation not found"){
     Tree T("Bobbie");
-    T.addMother("Julian","Betsy");
-    T.addFather("Julian","James");
-    T.addMother("Bet","Elizabet");
-    T.addFather("Tal","Jam");
-    T.addMother("Bet","Elizabet");
-    T.addFather("Bil","Jame");
+    T.addMother("Julian","Betsy")
+     .addFather("Julian","James")
+     .addMother("Bet","Elizabet")
+     .addFather("Tal","Jam")
+     .addMother("Bet","Elizabet")
+     .addFather("Bil","Jame");
     CHECK(T.relation("Carter")=="unrelated");
     CHECK(T.relation("Grayson")=="unrelated");
     CHECK(T.relation("Mason")=="unrelated");
@@ -37,98 +37,98 @@ TEST_CASE("Test relation not found"){
 }
 TEST_CASE("Test relation :father, mother, grandmother, great-grandfather, great-great-grandmother"){
     Tree T("Bobbie");
-    T.addMother("Bobbie","Betsy");
-    T.addFather("Bobbie","James");
+    T.addMother("Bobbie","Betsy")
+     .addFather("Bobbie","James")
 //Betsy-mother-
-    T.addMother("Betsy","Beverly");
-    T.addFather("Betsy","Colton");
+     .addMother("Betsy","Beverly")
+     .addFather("Betsy","Colton")
 //James-father-
-    T.addMother("James","Camilla");
-    T.addFather("James","Greyson");
+     .addMother("James","Camilla")
+     .addFather("James","Greyson")
 //Beverly-grandmother-
-    T.addMother("Beverly","Cara");
-    T.addFather("Beverly","Robert");
+     .addMother("Beverly","Cara")
+     .addFather("Beverly","Robert")
 //Colton-grandfather-
-    T.addMother("Colton","Charlotte");
-    T.addFather("Colton","Greyson");
+     .addMother("Colton","Charlotte")
+     .addFather("Colton","Greyson")
 //Camilla-grandmother-
-    T.addMother("Camilla","Austin");
-    T.addFather("Camilla","Chloe");
+     .addMother("Camilla","Austin")
+     .addFather("Camilla","Chloe")
 //Greyson-grandfather-
-    T.addMother("Greyson","Chelsea");
-    T.addFather("Greyson","Cooper");
+     .addMother("Greyson","Chelsea")
+     .addFather("Greyson","Cooper")
 //Cara-great-grandmother-
-    T.addMother("Cara","Clara");
-    T.addFather("Cara","Parker");
+     .addMother("Cara","Clara")
+     .addFather("Cara","Parker")
 //Robert-great-grandfather-
-    T.addMother("Robert","Clarisa");
-    T.addFather("Robert","Jhon");
+     .addMother("Robert","Clarisa")
+     .addFather("Robert","Jhon")
 //Charlotte-great-grandmother-
-    T.addMother("Charlotte","Claudia");
-    T.addFather("Charlotte","Wesley");
+     .addMother("Charlotte","Claudia")
+     .addFather("Charlotte","Wesley")
 //Greyson-great-grandfather-
-    T.addMother("Greyson","Ann");
-    T.addFather("Greyson","Beni");
+     .addMother("Greyson","Ann")
+     .addFather("Greyson","Beni")
 //Austin-great-grandmother-
-    T.addMother("Austin","Fali");
-    T.addFather("Austin","Han");
+     .addMother("Austin","Fali")
+     .addFather("Austin","Han")
 //Chloe-great-grandfather-
-    T.addMother("Chloe","Many");
-    T.addFather("Chloe","Stiw");
+     .addMother("Chloe","Many")
+     .addFather("Chloe","Stiw")
 //Chelsea-great-grandmother-
-    T.addMother("Chelsea","Len");
-    T.addFather("Chelsea","Andre");
+     .addMother("Chelsea","Len")
+     .addFather("Chelsea","Andre")
 //Cooper-great-grandfather-
-    T.addMother("Cooper","Ira");
-    T.addFather("Cooper","Sasha");
+     .addMother("Cooper","Ira")
+     .addFather("Cooper","Sasha")
 //Clara-great-great-grandmother-
-    T.addMother("Clara","Iris");
-    T.addFather("Clara","Martin");
+     .addMother("Clara","Iris")
+     .addFather("Clara","Martin")
 //Parker-great-great-grandfather-
-    T.addMother("Parker","April");
-    T.addFather("Parker","Silas");
+     .addMother("Parker","April")
+     .addFather("Parker","Silas")
 //Clarisa-great-great-grandmother-
-    T.addMother("Clarisa","Arlene");
-    T.addFather("Clarisa","Miles");
+     .addMother("Clarisa","Arlene")
+     .addFather("Clarisa","Miles")
 //Jhon-great-great-grandfather-
-    T.addMother("Jhon","Ava");
-    T.addFather("Jhon","Harrison");
+     .addMother("Jhon","Ava")
+     .addFather("Jhon","Harrison")
 //Claudia-great-great-grandmother-
-    T.addMother("Claudia","Emma");
-    T.addFather("Claudia","Brandon");
+     .addMother("Claudia","Emma")
+     .addFather("Claudia","Brandon")
 //Wesley-great-great-grandfather-
-    T.addMother("Wesley","Nina");
-    T.addFather("Wesley","Braxton");
+     .addMother("Wesley","Nina")
+     .addFather("Wesley","Braxton")
 //Ann-great-great-grandmother-
-    T.addMother("Ann","Molly");
-    T.addFather("Ann","Brooks");
+     .addMother("Ann","Molly")
+     .addFather("Ann","Brooks")
 //Beni-great-great-grandfather-
-    T.addMother("Beni","Vera");
-    T.addFather("Beni","Dean");
+     .addMother("Beni","Vera")
+     .addFather("Beni","Dean")
 //Fali-great-great-grandmother-
-    T.addMother("Fali","Lucy");
-    T.addFather("Fali","Hayden");
+     .addMother("Fali","Lucy")
+     .addFather("Fali","Hayden")
 //Han-great-great-grandfather-
-    T.addMother("Han","Alexia");
-    T.addFather("Han","Karter");
+     .addMother("Han","Alexia")
+     .addFather("Han","Karter")
 //Many-great-great-grandmother-
-    T.addMother("Many","Debra");
-    T.addFather("Many","Dean");
+     .addMother("Many","Debra")
+     .addFather("Many","Dean")
 //Stiw-great-great-grandfather-
-    T.addMother("Stiw","Rosa");
-    T.addFather("Stiw","Myles");
+     .addMother("Stiw","Rosa")
+     .addFather("Stiw","Myles")
 //Len-great-great-grandmother-
-    T.addMother("Len","Debra");
-    T.addFather("Len","Dean");
+     .addMother("Len","Debra")
+     .addFather("Len","Dean")
 //Andre-great-great-grandfather-
-    T.addMother("Andre","Lucia");
-    T.addFather("Andre","Jeremy");
+     .addMother("Andre","Lucia")
+     .addFather("Andre","Jeremy")
 //Ira-great-great-grandmother-
-    T.addMother("Ira","Amanda");
-    T.addFather("Ira","Oscar");
+     .addMother("Ira","Amanda")
+     .addFather("Ira","Oscar")
 //Sasha-great-great-grandfather-
-    T.addMother("Sasha","Traci");
-    T.addFather("Sasha","Legend");
+     .addMother("Sasha","Traci")
+     .addFather("Sasha","Legend");
 
     CHECK(T.relation("Bobbie")=="name");
     CHECK(T.relation("Betsy")=="mother");
@@ -165,27 +165,27 @@ TEST_CASE("Test relation :father, mother, grandmother, great-grandfather, great-
 }
 TEST_CASE("Test function - remove"){
     Tree T("Bobbie");
-    T.addMother("Bobbie","Betsy");
-    T.addFather("Bobbie","James");
+    T.addMother("Bobbie","Betsy")
+     .addFather("Bobbie","James")
 //Betsy-mother-
-    T.addMother("Betsy","Beverly");
-    T.addFather("Betsy","Colton");
+     .addMother("Betsy","Beverly")
+     .addFather("Betsy","Colton")
 //James-father-
-    T.addMother("James","Camilla");
-    T.addFather("James","Greyson");
+     .addMother("James","Camilla")
+     .addFather("James","Greyson")
 //Beverly-grandmother-
-    T.addMother("Beverly","Cara");
-    T.addFather("Beverly","Robert");
+     .addMother("Beverly","Cara")
+     .addFather("Beverly","Robert")
 //Colton-grandfather-
-    T.addMother("Colton","Charlotte");
-    T.addFather("Colton","Greyson");
+     .addMother("Colton","Charlotte")
+     .addFather("Colton","Greyson")
 //Camilla-grandmother-
-    T.addMother("Camilla","Austin");
-    T.addFather("Camilla","Chloe");
+     .addMother("Camilla","Austin")
+     .addFather("Camilla","Chloe")
 //Greyson-grandfather-
-    T.addMother("Greyson","Chelsea");
-    T.addFather("Greyson","Cooper");
-    T.remove("Greyson");
+     .addMother("Greyson","Chelsea")
+     .addFather("Greyson","Cooper")
+     .remove("Greyson");
     CHECK(T.relation("Greyson")=="unrelated");
     CHECK(T.relation("Cooper")=="unrelated");
     CHECK(T.relation("Chelsea")=="unrelated");
@@ -216,27 +216,27 @@ TEST_CASE("Test function - remove"){
 }
 TEST_CASE("Test remove -root "){
     Tree T("Bobbie");
-    T.addMother("Bobbie","Betsy");
-    T.addFather("Bobbie","James");
+    T.addMother("Bobbie","Betsy")
+     .addFather("Bobbie","James")
 //Betsy-mother-
-    T.addMother("Betsy","Beverly");
-    T.addFather("Betsy","Colton");
+     .addMother("Betsy","Beverly")
+     .addFather("Betsy","Colton")
 //James-father-
-    T.addMother("James","Camilla");
-    T.addFather("James","Greyson");
+     .addMother("James","Camilla")
+     .addFather("James","Greyson")
 //Beverly-grandmother-
-    T.addMother("Beverly","Cara");
-    T.addFather("Beverly","Robert");
+     .addMother("Beverly","Cara")
+     .addFather("Beverly","Robert")
 //Colton-grandfather-
-    T.addMother("Colton","Charlotte");
-    T.addFather("Colton","Greyson");
+     .addMother("Colton","Charlotte")
+     .addFather("Colton","Greyson")
 //Camilla-grandmother-
-    T.addMother("Camilla","Austin");
-    T.addFather("Camilla","Chloe");
+     .addMother("Camilla","Austin")
+     .addFather("Camilla","Chloe")
 //Greyson-grandfather-
-    T.addMother("Greyson","Chelsea");
-    T.addFather("Greyson","Cooper");
-    T.remove("Bobbie");
+     .addMother("Greyson","Chelsea")
+     .addFather("Greyson","Cooper");
+     T.remove("Bobbie");
     CHECK(T.relation("Greyson")=="unrelated");
     CHECK(T.relation("Cooper")=="unrelated");
     CHECK(T.relation("Chelsea")=="unrelated");
@@ -261,40 +261,40 @@ TEST_CASE("Test remove -root "){
 }
 TEST_CASE("Test - choosing the right answer between two"){
     Tree T("Bobbie");
-    T.addMother("Bobbie","Betsy");
-    T.addFather("Bobbie","James");
+    T.addMother("Bobbie","Betsy")
+     .addFather("Bobbie","James")
 //Betsy-mother-
-    T.addMother("Betsy","Betsy");
-    T.addFather("Betsy","Colton");
+     .addMother("Betsy","Betsy")
+     .addFather("Betsy","Colton")
 //James-father-
-    T.addMother("James","Camilla");
-    T.addFather("James","Greyson");
+     .addMother("James","Camilla")
+     .addFather("James","Greyson")
 //Betsy-grandmother-
-    T.addMother("Betsy","Cara");
-    T.addFather("Betsy","Robert");
+     .addMother("Betsy","Cara")
+     .addFather("Betsy","Robert");
 
     CHECK(T.relation("Betsy")=="mother");
     CHECK(T.relation("Betsy")=="grandmother");
 } 
 TEST_CASE("Test exception") {
     Tree T("Bobbie");
-    T.addMother("Bobbie","Betsy");
-    T.addFather("Bobbie","James");
+    T.addMother("Bobbie","Betsy")
+     .addFather("Bobbie","James")
 //Betsy-mother-
-    T.addMother("Betsy","Beverly");
-    T.addFather("Betsy","Colton");
+     .addMother("Betsy","Beverly")
+     .addFather("Betsy","Colton")
 //James-father-
-    T.addMother("James","Camilla");
-    T.addFather("James","Greyson");
+     .addMother("James","Camilla")
+     .addFather("James","Greyson")
 //Beverly-grandmother-
-    T.addMother("Beverly","Cara");
-    T.addFather("Beverly","Robert");
+     .addMother("Beverly","Cara")
+     .addFather("Beverly","Robert")
 //Colton-grandfather-
-    T.addMother("Colton","Charlotte");
-    T.addFather("Colton","Greyson");
+     .addMother("Colton","Charlotte")
+     .addFather("Colton","Greyson")
 //Camilla-grandmother-
-    T.addMother("Camilla","Austin");
-    T.addFather("Camilla","Chloe");
+     .addMother("Camilla","Austin")
+     .addFather("Camilla","Chloe");
 
     CHECK_THROWS_AS(T.relation("Bobbie")=="unrelated", std::exception);
     CHECK_THROWS_AS(T.relation("Betsy")=="unrelated", std::exception);
