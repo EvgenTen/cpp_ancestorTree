@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+using namespace std::string;
 
 namespace family{
     struct node{
