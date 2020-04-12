@@ -1,5 +1,6 @@
 #include <iostream>
-using namespace std::string;
+using namespace std;
+
 
 namespace family{
     struct node{
@@ -7,7 +8,7 @@ namespace family{
         node *father=nullptr;
         node *mather=nullptr;
     };
-    struct Tree{
+    class Tree{
      private:
         node root;
      public:
