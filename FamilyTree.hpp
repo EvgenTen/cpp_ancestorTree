@@ -1,12 +1,14 @@
 #include <iostream>
+#include <string>
+#pragma once
 using namespace std;
 
 
 namespace family{
     struct node{
         string name;
-        node *father=nullptr;
-        node *mather=nullptr;
+        node* father=nullptr;
+        node* mather=nullptr;
     };
     class Tree{
      private:
